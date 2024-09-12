@@ -14,7 +14,18 @@ int main() {
     cout << "float 32 bit +-3.4 * 10**-38 ... +-3.4 * 10**38" << endl; 
     cout << "double 64 bit +-1.7 * 10**-308 ... +-1.7 * 10**308" << endl; 
     cout << "long double 80 bit +-3.4 * 10**-4932 ... +-1.1 * 10**4932" << endl; 
-    cout << "bool 8 bit true, false" << endl; 
+    cout << "bool 8 bit true, false\n" << endl; 
+
+    cout << "int: 5 + 2 = " << 5 + 2 << endl;
+    cout << "int: 5 - 2 = " << 5 - 2 << endl;
+    cout << "int: 5 * 2 = " << 5 * 2 << endl;
+    cout << "int: 5 / 2 = " << 5 / 2 << endl;
+    cout << "int: 5 % 2 = " << 5 % 2 << endl;
+
+    cout << "float: 3.1 + 3.2 = " << 3.1 + 3.2 << endl;
+    cout << "float: 3.1 - 3.2 = " << 3.1 - 3.2 << endl;
+    cout << "float: 3.1 * 3.2 = " << 3.1 * 3.2 << endl;
+    cout << "float: 3.1 / 3.2 = " << 3.1 / 3.2 << endl;
 
     return 0;
 }
