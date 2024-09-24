@@ -45,5 +45,11 @@ int main() {
     default: cout << "Error" << endl; break;
     }
 
+    char x;
+    cout << "Enter x: ";
+    cin >> x;
+
+    cout << (x == 1 ? "Positive number" : x == -1 ? "Negative number" : "Error") << endl;
+    
     return 0;
 }
