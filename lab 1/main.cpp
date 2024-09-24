@@ -1,31 +1,33 @@
 #include <iostream>
-#include <iomanip>
+#include <limits>
 
 using namespace std;
 
 int main() {
 
-    cout << "char 8 bit -128 ... 127" << endl;
-    cout << "unsigned char 8 bit 0 ... 256" << endl; 
-    cout << "int 16 bit -32_768 ... 32_367" << endl; 
-    cout << "unsigned int 16 bit 0 ... 65_535" << endl; 
-    cout << "long int 32 bit -2_147_483_648 ... 2_147_483_676" << endl; 
-    cout << "unsigned long int 32 bit 0 ... 4_294_967_295" << endl; 
-    cout << "float 32 bit +-3.4 * 10**-38 ... +-3.4 * 10**38" << endl; 
-    cout << "double 64 bit +-1.7 * 10**-308 ... +-1.7 * 10**308" << endl; 
-    cout << "long double 80 bit +-3.4 * 10**-4932 ... +-1.1 * 10**4932" << endl; 
-    cout << "bool 8 bit true, false\n" << endl; 
+    cout << "char: " << sizeof(char) << " byte, min: -127, max: 128" << endl;
+    cout << "unsigned char: " << sizeof(unsigned char) << " byte, min: 0, max: 255" << endl;    
+    cout << "bool: " << sizeof(bool) << " byte, min: " << numeric_limits<bool>::min() << ", max: " << numeric_limits<bool>::max() << endl;                 
+    cout << "short int: " << sizeof(short int) << " byte, min: " << numeric_limits<short int>::min() << ", max: " << numeric_limits<short int>::max() << endl;       
+    cout << "int: " << sizeof(int) << " byte, min: " << numeric_limits<int>::min() << ", max: " << numeric_limits<int>::max() << endl;
+    cout << "unsigned int: " << sizeof(unsigned int) << " byte, min: " << numeric_limits<unsigned int>::min() << ", max: " << numeric_limits<unsigned int>::max() << endl;               
+    cout << "long int: " << sizeof(long int) << " byte, min: " << numeric_limits<long int>::min() << ", max: " << numeric_limits<long int>::max() << endl;      
+    cout << "unsigned long int: " << sizeof(unsigned long int) << " byte, min: " << numeric_limits<unsigned long int>::min() << ", max: " << numeric_limits<unsigned long int>::max() << endl;           
+    cout << "long long int: " << sizeof(long long) << " byte, min: " << numeric_limits<long long>::min() << ", max: " << numeric_limits<long long>::max() << endl;   
+    cout << "float: " << sizeof(float) << " byte, min: " << numeric_limits<float>::min() << ", max: " << numeric_limits<float>::max() << endl;               
+    cout << "double: " << sizeof(double) << " byte, min: " << numeric_limits<double>::min() << ", max: " << numeric_limits<double>::max() << endl;             
+    cout << "long double: " << sizeof(long double) << " byte, min: " << numeric_limits<long double>::min() << ", max: " << numeric_limits<long double>::max() << endl << endl;
 
     cout << "int: 5 + 2 = " << 5 + 2 << endl;
     cout << "int: 5 - 2 = " << 5 - 2 << endl;
     cout << "int: 5 * 2 = " << 5 * 2 << endl;
     cout << "int: 5 / 2 = " << 5 / 2 << endl;
-    cout << "int: 5 % 2 = " << 5 % 2 << endl;
+    cout << "int: 5 % 2 = " << 5 % 2 << endl << endl;
 
     cout << "float: 3.1 + 3.2 = " << 3.1 + 3.2 << endl;
     cout << "float: 3.1 - 3.2 = " << 3.1 - 3.2 << endl;
     cout << "float: 3.1 * 3.2 = " << 3.1 * 3.2 << endl;
-    cout << "float: 3.1 / 3.2 = " << 3.1 / 3.2 << endl;
+    cout << "float: 3.1 / 3.2 = " << 3.1 / 3.2 << endl << endl;
 
     return 0;
 }
