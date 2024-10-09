@@ -32,9 +32,14 @@ int main() {
         }
     }
 
-    cout << "Result: " << result << endl << 
-    "Min_num: " << min_num << endl << 
-    "Number min_num: " << i_min_num;
+    if (b) 
+        cout << "Error" << endl;
+    else {
+        cout << "Result: " << result << endl << 
+        "Min_num: " << min_num << endl << 
+        "Number min_num: " << i_min_num << endl;
+    }
+
 
     return 0;
 }
