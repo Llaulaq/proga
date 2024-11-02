@@ -25,8 +25,8 @@ int main() {
 
     rkh::Read(matrix, n, m);
     
-    if (rkh::identicalColumns && rkh::isPrime(matrix, n, m)) {
-        
+    if (rkh::identicalColumns(matrix, n, m) && rkh::isPrime(matrix, n, m)) {
+
     }
 
     rkh::Write(matrix, n, m);

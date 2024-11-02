@@ -7,4 +7,5 @@ namespace rkh {
     void Write(int matrix[MAX_SIZE][MAX_SIZE], int n, int m);
     bool identicalColumns(int matrix[MAX_SIZE][MAX_SIZE], int n, int m);
     bool isPrime(int matrix[MAX_SIZE][MAX_SIZE], int n, int m);
+    int sortMatrix(int matrix[MAX_SIZE][MAX_SIZE], int n, int m);
 }

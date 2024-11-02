@@ -26,12 +26,14 @@ namespace rkh {
 
 
     bool identicalColumns(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
-        for (int i = 1; i < n; ++i) {
+        for (int i = 0; i < n; ++i) {
             bool flag = true;
             for (int j = 1; j < m; ++j) {
-                if (matrix[i - 1][j - 1] != matrix[i][j]) {
-                    flag = false;
+                if (matrix[i][j - 1] == matrix[i][j]) {
+                    continue;
                 }
+                flag = false;
+                break;
             }
             if (flag) {
                 return flag;
@@ -62,5 +64,12 @@ namespace rkh {
         }
         return false;
     }
-    
+
+    /*int sortMatrix(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+        for (int i = 1; i < n; ++i) {
+            for (int j = 1; j < m; ++j) {
+                
+            }
+        }
+    }*/
 }
