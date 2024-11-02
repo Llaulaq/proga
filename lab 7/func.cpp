@@ -4,6 +4,7 @@
 const int MAX_SIZE = 100;
 
 namespace rkh {
+    
     void Read(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
         std::cout << "Enter the sequence elements: ";
         for (int i = 0; i < n; ++i) {
@@ -49,15 +50,17 @@ namespace rkh {
                 for (int d = 2; d <= sqrt(matrix_ij) + 1; ++d) {
                     if(matrix_ij % d != 0) {
                         continue;                     
+                    }
+                    isPrimeNum = false;
+                    break;
                 }
-                
-                isPrimeNum = false;
-                return isPrimeNum;
-                
+
+                if (isPrimeNum) {
+                    return isPrimeNum;
+                }
             }
         }
+        return false;
     }
     
-
-
 }
