@@ -65,11 +65,21 @@ namespace rkh {
         return false;
     }
 
-    /*int sortMatrix(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
-        for (int i = 1; i < n; ++i) {
-            for (int j = 1; j < m; ++j) {
-                
+    void bubbleSort(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+        for (int i = 1; i < n - 1; ++i) {
+            for (int j = 0; j < n - i - 1; ++j) {
+                int sum1 = 0, sum2 = 0;
+                for (int t = 0; t < m; ++t) {
+                    sum1 += abs(matrix[i][t]);
+                    sum2 += abs(matrix[j][t]);      
+                }
+
+                if (sum1 > sum2) {
+                    for (int t = 0; t < m; ++t) {
+                        std::swap(matrix[i][t], matrix[j][t]);
+                    }
+                } 
             }
         }
-    }*/
+    }
 }
