@@ -48,9 +48,17 @@ int main() {
         }
     }
 
-    std::cout << "Result: " << std::endl;
     for (int j = 0; j < m; ++j) {
-        std::cout << matrix[minI][j] << " ";
+        matrix[minI][j] = 0;
+    }
+
+
+    std::cout << "Result: " << std::endl;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            std::cout << matrix[i][j] << " ";
+        }
+        std::cout << std::endl;
     }
         
     return 0;
