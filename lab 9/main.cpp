@@ -12,11 +12,11 @@ int main() {
     int a{};
     std::cin >> a;
 
-    unsigned char * p { (unsigned char *) &a };
+    unsigned char * p = (unsigned char *) &a;
 
     for (int i = 0; i < sizeof(a); ++i) {
         int b { *(p + i) };
-        std::cout << b << " ";
+        std::cout << std::hex << b << " ";
     }
 
     return 0;
