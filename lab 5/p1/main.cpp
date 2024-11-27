@@ -6,7 +6,7 @@ using namespace std;
 1. Дана последовательность натуральных чисел {Aj}. Найти произведение чисел, 
 оканчивающихся цифрой 2 или 4, 
 наименьшее из таких чисел и номер этого числа в последовательности.
-2. Дано натуральное число N (N<10^9). Найти наибольшую цифру числа N.*/
+*/
 
 int main() {
     unsigned int n, min_num, i_min_num = 0, result = 1;
@@ -39,19 +39,6 @@ int main() {
         "Min_num: " << min_num << endl << 
         "Number min_num: " << i_min_num << endl;
     }
-
-
-    int x, max_x = 0;
-    cin >> x;
-
-    while (x > 0) {
-        int digit = x % 10;
-        if (max_x < digit) 
-            max_x = digit;
-        x /= 10;
-    }
-
-    cout << "Max: " << max_x << endl;
 
     return 0;
 }
