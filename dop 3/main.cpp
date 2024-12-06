@@ -28,6 +28,7 @@ bool read(int& cnt, int sequence[MAX_SIZE]) {
     }
 }
 
+
 void deleteSequenceNum(int cnt, int sequence[MAX_SIZE]) {
     for (int i = 0; i < cnt; ++i) {
         if (isPrime(i)) {
@@ -41,7 +42,6 @@ void deleteSequenceNum(int cnt, int sequence[MAX_SIZE]) {
 }
 
 
-
 bool isPrime(int num) {
     for(int d = 2; d <= sqrt(num) + 1; ++d) {
         if(num % d != 0) continue;
@@ -51,6 +51,17 @@ bool isPrime(int num) {
     return true;
 }
 
+
+void duplicateSequenceNum(int cnt, int sequence[MAX_SIZE]) {
+    for (int i = 0; i < cnt; ++i) {
+        for(int j = cnt; j > i; --j) {
+                sequence[j] = sequence[j - 1];
+        } 
+        i++;
+        cnt++;     
+    }
+}
+    
 
 
 int main() {
@@ -62,6 +73,7 @@ int main() {
     }
     
     deleteSequenceNum(cnt, sequence);
+    duplicateSequenceNum(cnt, sequence);
 
     return 0;
 }
