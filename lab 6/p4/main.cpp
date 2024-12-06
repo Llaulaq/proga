@@ -59,12 +59,12 @@ int main() {
     // дублирование
      for(int i = 0; i < n; ++i) {
         bool isPrime = true;
-        for(int d = 2; d <= sqrt(sequence[i]) + 1; ++d) {
-            if(sequence[i] % d != 0)
-            continue;
-        
-            isPrime = false;
-            break;
+        if (sequence[i] == 1) isPrime = false;
+        for(int d = 2; d <= sqrt(sequence[i]); ++d) {
+            if (sequence[i] % d == 0) {
+                isPrime = false;
+                break;
+            }
         }
         if(isPrime) {
             for(int j = n; j > i; --j) {
