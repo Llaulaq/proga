@@ -42,6 +42,14 @@ void deleteSequenceNum(int cnt, int sequence[MAX_SIZE]) {
 
 
 
+bool isPrime(int num) {
+    for(int d = 2; d <= sqrt(num) + 1; ++d) {
+        if(num % d != 0) continue;
+
+        return false;
+    }
+    return true;
+}
 
 
 
