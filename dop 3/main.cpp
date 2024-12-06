@@ -63,6 +63,13 @@ void duplicateSequenceNum(int cnt, int sequence[MAX_SIZE]) {
 }
     
 
+void write(int cnt, int sequence[MAX_SIZE]) {
+    std::cout << "Result: ";
+    for (int i = 0; i < cnt; ++i) {
+        std::cout << sequence[i] << " ";
+    }
+}
+
 
 int main() {
     int cnt { 0 };
@@ -74,6 +81,8 @@ int main() {
     
     deleteSequenceNum(cnt, sequence);
     duplicateSequenceNum(cnt, sequence);
+
+    write(cnt, sequence);
 
     return 0;
 }
