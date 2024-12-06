@@ -6,7 +6,7 @@
 сумма цифр которых равна 15.
 */
 
-const int MAX_SIZE { 10000 };
+const int MAX_SIZE { 20000 };
 
 
 bool read(int& cnt, int sequence[MAX_SIZE]) { 
@@ -28,6 +28,21 @@ bool read(int& cnt, int sequence[MAX_SIZE]) {
     }
 }
 
+void deleteSequenceNum(int cnt, int sequence[MAX_SIZE]) {
+    for (int i = 0; i < cnt; ++i) {
+        if (isPrime(i)) {
+            for(int j = i; j < cnt - 1; ++j) {
+                sequence[j] = sequence[j + 1];
+            } 
+            i--;
+            cnt--;
+        } 
+    }
+}
+
+
+
+
 
 
 int main() {
@@ -37,7 +52,8 @@ int main() {
     if (!read(cnt, sequence)) {
         return -1;
     }
-
+    
+    deleteSequenceNum(cnt, sequence);
 
     return 0;
 }
