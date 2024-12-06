@@ -38,6 +38,7 @@ int main() {
             s = pi * r2*r2;
         }
         else {
+            //formula
             alpha = acos((r1*r1 + p*p - r2*r2) / (2 * r1 * p)) * 2;
             beta = acos((r2*r2 + p*p - r1*r1) / (2 * r2 * p)) * 2;
             s -= 0.5 * beta * r2*r2 - 0.5 * r2*r2 * sin(beta);
