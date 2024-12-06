@@ -60,6 +60,7 @@ bool sum15(int num) {
         sum += x;
         num /= 10;
     }
+    return sum == 15;
 }
 
 
@@ -93,7 +94,6 @@ int main() {
     }
     
     deleteSequenceNum(cnt, sequence);
-    write(cnt, sequence);
     duplicateSequenceNum(cnt, sequence);
 
     write(cnt, sequence);
