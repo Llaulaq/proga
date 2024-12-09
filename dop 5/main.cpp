@@ -25,20 +25,24 @@ int main() {
     double alpha { 0 };
     double beta { 0 };
 
-    //the distance between the centers of the circles
+    //вычисление расстояния между центрами при помощи формулы длины вектора
     p = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
-    //the areas of both circles
+    //общая площадь двух кругов
     s = pi * (r1*r1 + r2*r2);
 
+    //если сумма радиусов больше расстояния между центрами
     if ((r1 + r2) >= ceil(p)) {
+        //второй круг находится в первом
         if (r1 >= ceil(p)) {
             s = pi * r1*r1;
+        //первый круг находится во втором
         }
         else if (r2 >= ceil(p)) {
             s = pi * r2*r2;
         }
+        //если окружности пересекаются
         else {
-            //formula
+            //formula https://otvet.mail.ru/question/202938370
             alpha = acos((r1*r1 + p*p - r2*r2) / (2 * r1 * p)) * 2;
             beta = acos((r2*r2 + p*p - r1*r1) / (2 * r2 * p)) * 2;
             s -= 0.5 * beta * r2*r2 - 0.5 * r2*r2 * sin(beta);
