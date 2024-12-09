@@ -7,7 +7,7 @@
 
 int main() {
     int count { 0 };
-    for (int i = 0; i <= 999'999; ++i) {
+    for (int i = 1; i <= 999'999; ++i) {
         int sum1 { 0 };
         int sum2 { 0 };
         int num  { i };
