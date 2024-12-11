@@ -152,13 +152,36 @@ void countingSort(int n, int mas[MAX_SIZE]) {
  
 //сортировка кучей !!!
 
+void heapify(int n, int i, int mas[MAX_SIZE]) {
+    int largest = i;   
 
+    int l = 2*i + 1; 
+    int r = 2*i + 2; 
 
+    if (l < n && mas[l] > mas[largest]) {
+        largest = l;
+    }
 
+    if (r < n && mas[r] > mas[largest]) {
+        largest = r;
+    }
 
-void heapSort(int n, int mas[MAX_SIZE]) { 
- 
-} 
+    if (largest != i) {
+        swapN(i, largest, mas);
+        heapify(n, largest, mas);
+    }
+}
+
+void heapSort(int n, int mas[MAX_SIZE]) {
+    for (int i = n / 2 - 1; i >= 0; --i) {
+        heapify(n, i, mas);
+    }
+
+    for (int i = n - 1; i >= 0; --i)  {
+        swapN(0, i, mas);
+        heapify(i, 0, mas);
+    }
+}
  
  
  
@@ -166,7 +189,7 @@ void heapSort(int n, int mas[MAX_SIZE]) {
 int main() { 
     int mas[5]{ 93, -86, 457, 5, -9 }; 
  
-    quickSort(0, 4, mas); 
+    heapSort(5, mas); 
  
     for (int i = 0; i < 5; ++i) { 
         std::cout << mas[i] << " "; 
