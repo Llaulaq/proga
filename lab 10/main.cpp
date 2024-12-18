@@ -162,7 +162,7 @@ int main() {
         pp = p;  
     }
 
-    if (non_growthFirstdigit(top) || non_growthLastdigit) {
+    if (non_growthFirstdigit(top) || non_growthLastdigit(top)) {
         remove_numbers(top);
         duplicate_numbers(top);
     } 
