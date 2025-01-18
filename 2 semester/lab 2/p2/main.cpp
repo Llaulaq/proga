@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ctime>
+#include <chrono>
 
 /* Var 1
 Реализуйте быструю сортировку. Изучите, как она работает. 
@@ -63,13 +63,12 @@ int main() {
         std::cin >> mas[i];
     }
 
-    //http://cppstudio.com/post/468/
-    unsigned int start_time =  clock();
-    quickSort(0, cnt, mas);
+    //https://www.techiedelight.com/ru/measure-elapsed-time-program-chrono-library/
+    auto start = std::chrono::steady_clock::now();
+    quickSort(0, cnt - 1, mas);
     //swapSort(cnt, mas);
-    unsigned int end_time = clock();
-    unsigned int search_time = end_time - start_time;
-    std::cout << "Program opening hours: " << search_time << '\n';
+    auto end = std::chrono::steady_clock::now();   
+    std::cout << "Program opening hours: " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count() << " ns." << '\n';
 
     for (int i = 0; i < cnt; ++i) { 
         std::cout << mas[i] << " "; 
